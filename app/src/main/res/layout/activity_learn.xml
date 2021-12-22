@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Learn"
+    android:background="@color/dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/app_name_tb"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/learn"
+                android:textColor="@color/blue"
+                android:textSize="28sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name_tb">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/first_courses"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/chord_library"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image1"
+                        android:contentDescription="Chord library"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/chord_library"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image2"
+                        android:contentDescription="@string/chord_progressions"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Chord progressions"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/second_courses"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_courses">
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image1"
+                        android:contentDescription="Chord library"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/chord_library"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image2"
+                        android:contentDescription="@string/chord_progressions"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Chord progressions"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/third_courses"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_courses">
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image1"
+                        android:contentDescription="Chord library"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/chord_library"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image2"
+                        android:contentDescription="@string/chord_progressions"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Chord progressions"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/fourth_courses"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_courses">
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image1"
+                        android:contentDescription="Chord library"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/chord_library"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="145dp"
+                    android:layout_height="190dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:src="@drawable/image2"
+                        android:contentDescription="@string/chord_progressions"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Chord progressions"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/darker_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        android:layout_marginTop="20dp"/>
+        
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"
+        android:background="@color/dark1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
