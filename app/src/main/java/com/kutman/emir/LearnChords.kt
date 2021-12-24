@@ -1,19 +1,19 @@
 package com.kutman.emir
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class ChordLibrary : AppCompatActivity() {
+class LearnChords : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chord_library)
+        setContentView(R.layout.activity_learn_chords)
 
-        val backCh = findViewById<ImageView>(R.id.back)
+        val backLC = findViewById<ImageView>(R.id.back)
 
-        backCh.setOnClickListener {
+        backLC.setOnClickListener {
             startActivity(Intent(this, Learn::class.java))
         }
 

@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Emir">
         <activity
+            android:name=".ChordGame"
+            android:exported="true" />
+        <activity
+            android:name=".ChordProgressions"
+            android:exported="true" />
+        <activity
+            android:name=".LearnChords"
+            android:exported="true" />
+        <activity
+            android:name=".Tuning"
+            android:exported="true" />
+        <activity
             android:name=".Instrument"
             android:exported="true" />
         <activity

@@ -3,6 +3,7 @@ package com.kutman.emir
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
 
         inst.setOnClickListener {
             startActivity(Intent(this, Instrument::class.java))
+        }
+
+        val tun = findViewById<LinearLayout>(R.id.select_tuning)
+
+        tun.setOnClickListener {
+            startActivity(Intent(this, Tuning::class.java))
         }
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)

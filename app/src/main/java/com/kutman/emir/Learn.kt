@@ -17,6 +17,24 @@ class Learn : AppCompatActivity() {
             startActivity(Intent(this, ChordLibrary::class.java))
         }
 
+        val prog = findViewById<LinearLayout>(R.id.progressions)
+
+        prog.setOnClickListener {
+            startActivity(Intent(this, ChordProgressions::class.java))
+        }
+
+        val learnc = findViewById<LinearLayout>(R.id.learn_chords)
+
+        learnc.setOnClickListener {
+            startActivity(Intent(this, LearnChords::class.java))
+        }
+
+        val game = findViewById<LinearLayout>(R.id.chord_game)
+
+        game.setOnClickListener {
+            startActivity(Intent(this, ChordGame::class.java))
+        }
+
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
         val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->

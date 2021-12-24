@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark"
-    tools:context=".Instrument">
+    tools:context=".LearnChords">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/app_name_tb"
@@ -33,11 +33,10 @@
             <TextView
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
-                android:text="@string/select_the_instrument"
+                android:text="@string/learn_chords"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +46,9 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="550dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_name_tb">
@@ -58,40 +58,41 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/instruments_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="@string/all_instruments"
-                android:textColor="@color/blue"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/line_after_tb"
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="30dp"
-                android:background="@color/blue"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/instruments_txt" />
-
-            <TextView
-                android:id="@+id/guitar"
+                android:id="@+id/openchords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/guitar"
+                android:text="@string/openchords"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/line_after_tb"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/openchords"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -101,30 +102,54 @@
                 android:contentDescription="@string/back"
                 android:src="@drawable/next"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/line_after_tb"/>
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <View
                 android:id="@+id/line_after_txt"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/guitar" />
+                app:layout_constraintTop_toBottomOf="@id/openchords" />
 
             <TextView
-                android:id="@+id/ukulele"
+                android:id="@+id/pow_chords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/ukulele"
+                android:text="@string/power_chords"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_after_txt" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pow_chords"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -140,24 +165,48 @@
                 android:id="@+id/line_after_txt2"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ukulele" />
+                app:layout_constraintTop_toBottomOf="@id/pow_chords" />
 
             <TextView
-                android:id="@+id/violin"
+                android:id="@+id/seven"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/violin_family"
+                android:text="@string/sevens"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_after_txt2" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seven"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt2"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -173,24 +222,48 @@
                 android:id="@+id/line_after_txt3"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/violin" />
+                app:layout_constraintTop_toBottomOf="@id/seven" />
 
             <TextView
-                android:id="@+id/mandolin"
+                android:id="@+id/g_fam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/mandolin"
+                android:text="@string/g_fam"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_after_txt3" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/g_fam"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt3"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -206,24 +279,48 @@
                 android:id="@+id/line_after_txt4"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/mandolin" />
+                app:layout_constraintTop_toBottomOf="@id/g_fam" />
 
             <TextView
-                android:id="@+id/banjo"
+                android:id="@+id/maj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/banjo"
+                android:text="@string/maj"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_after_txt4" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/maj"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt4"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -239,24 +336,48 @@
                 android:id="@+id/line_after_txt5"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/banjo" />
+                app:layout_constraintTop_toBottomOf="@id/maj" />
 
             <TextView
-                android:id="@+id/bass"
+                android:id="@+id/extra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/bass"
+                android:text="@string/extra_power"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_after_txt5" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/extra"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt5"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -272,24 +393,48 @@
                 android:id="@+id/line_after_txt6"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bass" />
+                app:layout_constraintTop_toBottomOf="@id/extra" />
 
             <TextView
-                android:id="@+id/custom"
+                android:id="@+id/a_shape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/quicksand_bold"
-                android:text="@string/custom_tuning"
+                android:text="@string/a_shape_chords"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_after_txt6" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a_shape"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt6"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
 
             <ImageView
                 android:layout_width="12dp"
@@ -305,11 +450,68 @@
                 android:id="@+id/line_after_txt7"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:background="@color/blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bass" />
+                app:layout_constraintTop_toBottomOf="@id/a_shape" />
+
+            <TextView
+                android:id="@+id/e_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/e_shape_chords"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt7" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/e_shape"
+                android:src="@drawable/stars"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stars"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="@string/from7"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt7"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="65dp"
+                android:gravity="center"
+                android:background="@drawable/progress"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/back"
+                android:src="@drawable/next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_after_txt7" />
+
+            <View
+                android:id="@+id/line_after_txt8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/e_shape" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

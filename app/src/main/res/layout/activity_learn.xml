@@ -61,13 +61,14 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="145dp"
                         android:src="@drawable/image1"
-                        android:contentDescription="Chord library"/>
+                        android:contentDescription="@string/chord_library"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -80,10 +81,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/progressions"
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -95,7 +98,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="Chord progressions"
+                        android:text="@string/chord_progressions"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
@@ -117,41 +120,44 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="145dp"
-                        android:src="@drawable/image1"
-                        android:contentDescription="Chord library"/>
+                        android:src="@drawable/ear_trainer"
+                        android:contentDescription="@string/ear_trainer"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="@string/chord_library"
+                        android:text="@string/ear_trainer"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/learn_chords"
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="145dp"
-                        android:src="@drawable/image2"
-                        android:contentDescription="@string/chord_progressions"/>
+                        android:src="@drawable/learn_chords"
+                        android:contentDescription="@string/learn_chords"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="Chord progressions"
+                        android:text="@string/learn_chords"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
@@ -173,41 +179,44 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="145dp"
-                        android:src="@drawable/image1"
-                        android:contentDescription="Chord library"/>
+                        android:src="@drawable/strumming"
+                        android:contentDescription="@string/strumming_patterns"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="@string/chord_library"
+                        android:text="@string/strumming_patterns"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/chord_game"
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="145dp"
-                        android:src="@drawable/image2"
-                        android:contentDescription="@string/chord_progressions"/>
+                        android:src="@drawable/chord_game"
+                        android:contentDescription="@string/custom_chord_game"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="Chord progressions"
+                        android:text="@string/custom_chord_game"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
@@ -229,19 +238,20 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="145dp"
-                        android:src="@drawable/image1"
-                        android:contentDescription="Chord library"/>
+                        android:src="@drawable/chord_game"
+                        android:contentDescription="@string/custom_chord_game"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="@string/chord_library"
+                        android:text="@string/custom_chord_game"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
@@ -251,7 +261,8 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_width="145dp"
                     android:layout_height="190dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -263,7 +274,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
-                        android:text="Chord progressions"
+                        android:text="@string/chord_progressions"
                         android:textColor="@color/blue"
                         android:fontFamily="@font/quicksand_bold"
                         android:textSize="16sp"/>
